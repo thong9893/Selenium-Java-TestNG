@@ -130,6 +130,7 @@ public class PersonalDetailPage extends EmployeeTabs {
     }
     @Step("Set personal details  data")
     public void setPersonalDetail(EmployeeInfo employeeInfo){
+        waitAllLoadingIconInvisible();
         enterToDriverLicenseTextbox(employeeInfo.getDriverLicenseNumber());
         enterToLicenseExpiredDateTextbox(employeeInfo.getLicenseExpiredDate());
         selectNationalityDropdown(employeeInfo.getNationality());

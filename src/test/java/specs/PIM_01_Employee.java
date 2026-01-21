@@ -64,7 +64,6 @@ public class PIM_01_Employee extends BaseTest {
         personalDetailPage.clickSaveButtonAtPersonalDetailContainer();
         Assert.assertTrue(basePage.isSuccessMessageDisplayed());
 
-        basePage.waitAllLoadingIconInvisible();
         personalDetailPage.verifyPersonalDetails(employeeInfo);
     }
     
