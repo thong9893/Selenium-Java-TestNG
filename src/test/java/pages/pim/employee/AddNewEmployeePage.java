@@ -29,6 +29,7 @@ public class AddNewEmployeePage extends BasePage {
     }
     @Step("Click Save on Add Employee container")
     public PersonalDetailPage clickToSaveButtonAtEmployeeContainer() {
+        waitAllLoadingIconInvisible();
         waitForElementClickAble(AddNewEmployeePageUI.SAVE_BUTTON_AT_ADD_EMPLOYEE_CONTAINER);
         clickToElement(AddNewEmployeePageUI.SAVE_BUTTON_AT_ADD_EMPLOYEE_CONTAINER);
         return PageGenerator.getPersonalDetailPage(driver);
